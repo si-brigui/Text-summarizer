@@ -35,7 +35,9 @@ A simple and user-friendly web application for summarizing text into concise sum
          
 
 +Screenshots:
-         
+            Screenshot_6-1-2025_19161_127.0.0.1.jpeg
+            Screenshot_6-1-2025_193544_127.0.0.1.jpeg
+            
 +License:
             This project is licensed under the MIT License.
 
