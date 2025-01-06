@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1e1e1e; /* Dark background */
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  width: 95%; /* Increase container width */
+  max-width: 1400px; /* Increase max width for larger screens */
+}
+
+h1 {
+  color: #f0b65f;
+  font-size: 4rem; /* Make the title larger */
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.8rem; /* Increase text size */
+  margin-bottom: 50px;
+  color: #aaa;
+}
+
+.text-area-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+textarea {
+  width: 100%; /* Ensure full width */
+  height: 300px; /* Increase height */
+  padding: 20px;
+  font-size: 1.5rem; /* Larger font size */
+  border: none;
+  border-radius: 15px;
+  background: #333;
+  color: #fff;
+  resize: none;
+}
+
+textarea:focus {
+  outline: 2px solid #f0b65f;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 25px; /* Increase gap between buttons */
+}
+
+.nav-button,
+.file-label {
+  width: 220px; /* Larger button size */
+  height: 60px;
+  font-size: 1.5rem; /* Bigger font size */
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: #f0b65f;
+  color: #fffbf5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.nav-button:hover,
+.file-label:hover {
+  background-color: #ce9d22;
+  color: #fff;
+}
+
+.file-label {
+  display: inline-block;
+  line-height: 60px; /* Vertically center text */
+}
+
+#fileInput {
+  display: none; /* Hide the file input */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+
+  .nav-button,
+  .file-label {
+    width: 180px; /* Adjust button size for smaller screens */
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    height: 150px; /* Further reduce height for very small screens */
+  }
+
+  .nav-button,
+  .file-label {
+    width: 160px; /* Adjust button size for mobile devices */
+    font-size: 1rem;
+  }
+}

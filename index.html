@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Summarizer</h1>
+      <p>Summarize your text into a shorter length.</p>
+      <div class="text-area-container">
+        <textarea id="inputText" placeholder="Enter your text"></textarea>
+        <textarea
+          id="outputText"
+          placeholder="Summarized text"
+          readonly
+        ></textarea>
+      </div>
+      <div class="button-container">
+        <label class="file-label" for="fileInput">Upload</label>
+        <input type="file" id="fileInput" accept=".txt" />
+        <button class="nav-button" onclick="summarizeText()">Summarize</button>
+        <button class="nav-button" id="downloadButton">Download</button>
+        <button class="nav-button" id="shareButton">Share</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
