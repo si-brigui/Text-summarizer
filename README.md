@@ -53,7 +53,7 @@ new version :
 +Contact:
      For questions, suggestions, or feedback, please reach out:
        Name: Mohamed Radhi Brigui
-       Email: briguimed.radhigmail.com
+       Email: briguimed.radhi@gmail.com
 
             
             
