@@ -35,9 +35,12 @@ A simple and user-friendly web application for summarizing text into concise sum
          
 
 +Screenshots:
-          ![Screenshot_21-10-2025_222031_127 0 0 1](https://github.com/user-attachments/assets/60e1657b-47b3-463d-878f-b0044f7fbb07)
+    old version :    
+    ![Screenshot_21-10-2025_222031_127 0 0 1](https://github.com/user-attachments/assets/60e1657b-47b3-463d-878f-b0044f7fbb07)
+new version :
+            ![Screenshot_22-10-2025_10179_127 0 0 1](https://github.com/user-attachments/assets/764d2db1-d229-448c-9e9d-3cfda063d7e0)
+![Screenshot_22-10-2025_101729_127 0 0 1](https://github.com/user-attachments/assets/037c55f6-7ba8-4024-91b5-5e981adf3a86)
 
-            
 +License:
             This project is licensed under the MIT License.
 
