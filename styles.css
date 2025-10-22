@@ -1,3 +1,22 @@
+:root {
+  --bg: #2762b4; /* page background */
+  --text: #ffffff; /* main text */
+  --muted: #c8d6de; /* secondary text */
+  --headline: #eaf2ff; /* h1 */
+  --surface: #cfe9f6; /* textarea background */
+  --surface-text: #0e3552; /* textarea text */
+  --placeholder: #6f8aa0; /* textarea placeholder */
+  --ring: #33d2ff; /* focus ring */
+  --secondary: #6b93aa; /* secondary buttons */
+  --secondary-hover: #597e93;
+  --primary: #0ea5e9; /* main CTA */
+  --primary-hover: #0284c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,125 +25,152 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #1e1e1e; /* Dark background */
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .container {
   text-align: center;
-  width: 95%; /* Increase container width */
-  max-width: 1400px; /* Increase max width for larger screens */
+  width: 95%;
+  max-width: 1400px;
 }
 
 h1 {
-  color: #f0b65f;
-  font-size: 4rem; /* Make the title larger */
-  margin-bottom: 30px;
+  color: var(--headline);
+  font-size: 4rem;
+  margin-bottom: 28px;
 }
 
 p {
-  font-size: 1.8rem; /* Increase text size */
-  margin-bottom: 50px;
-  color: #aaa;
+  font-size: 1.7rem;
+  margin-bottom: 44px;
+  color: var(--muted);
 }
 
 .text-area-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 26px;
+  margin-bottom: 38px;
 }
 
 textarea {
-  width: 100%; /* Ensure full width */
-  height: 300px; /* Increase height */
+  width: 100%;
+  height: 300px;
   padding: 20px;
-  font-size: 1.5rem; /* Larger font size */
-  border: none;
-  border-radius: 15px;
-  background: #333;
-  color: #fff;
+  font-size: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--surface-text);
   resize: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-textarea:focus {
-  outline: 2px solid #f0b65f;
+textarea::placeholder {
+  color: var(--placeholder);
+}
+
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
 }
 
 .button-container {
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap */
-  justify-content: center; /* Center buttons horizontally */
-  align-items: center; /* Align items vertically */
-  gap: 25px; /* Increase gap between buttons */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
 }
 
 .nav-button,
 .file-label {
-  width: 220px; /* Larger button size */
+  width: 220px;
   height: 60px;
-  font-size: 1.5rem; /* Bigger font size */
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 700;
   border-radius: 30px;
-  background-color: #f0b65f;
-  color: #fffbf5;
+  border: none;
+  background: var(--secondary);
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .nav-button:hover,
 .file-label:hover {
-  background-color: #ce9d22;
-  color: #fff;
+  background: var(--secondary-hover);
+  transform: translateY(-1px);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+.nav-button:focus-visible,
+.file-label:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring), 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Primary action button (e.g., Summarize) */
+.nav-button.primary {
+  background: var(--primary);
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.35);
+}
+.nav-button.primary:hover {
+  background: var(--primary-hover);
 }
 
 .file-label {
   display: inline-block;
-  line-height: 60px; /* Vertically center text */
+  line-height: 60px;
 }
-
 #fileInput {
-  display: none; /* Hide the file input */
+  display: none;
 }
 
-/* Media Queries for Responsiveness */
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-button,
+  .file-label {
+    transition: none;
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 3rem;
   }
-
   p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-
   textarea {
-    height: 200px; /* Adjust height for smaller screens */
+    height: 220px;
   }
-
   .nav-button,
   .file-label {
-    width: 180px; /* Adjust button size for smaller screens */
-    font-size: 1.2rem;
+    width: 180px;
+    font-size: 1.05rem;
   }
 }
-
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-
   textarea {
-    height: 150px; /* Further reduce height for very small screens */
+    height: 160px;
   }
-
   .nav-button,
   .file-label {
-    width: 160px; /* Adjust button size for mobile devices */
-    font-size: 1rem;
+    width: 160px;
+    font-size: 0.95rem;
   }
 }
